@@ -7,5 +7,5 @@
 // ================================================================
 
 window.INVITE_CONFIG = {
-  scriptUrl: ""
+  scriptUrl: "https://script.google.com/macros/s/AKfycbyWUql-T1gmwmJ6qlIs2mO3IwzHIbtuHgcV0fefpSnSqTOhzB0JW-zPnjztp0F8b_wNZA/exec"
 };
