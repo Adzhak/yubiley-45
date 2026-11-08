@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Юбилей 45 · Алексей Сергеевич</title>
+  <meta name="description" content="Алексей Сергеевич приглашает на юбилей — 45 лет. 24 ноября 2026, 17:00, баня, ул. Катаева, 116.">
+  <meta name="theme-color" content="#140d08">
+
+  <!-- Превью ссылки в WhatsApp / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Алексей Сергеевич приглашает на юбилей — 45 лет">
+  <meta property="og:description" content="24 ноября 2026 · 17:00 · Баня, ул. Катаева, 116. Ответьте, сможете ли прийти!">
+  <meta property="og:url" content="https://adzhak.github.io/yubiley-45/">
+  <meta property="og:image" content="https://adzhak.github.io/yubiley-45/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23140d08'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23e0b46a'%3E45%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Фон: угольки и пар -->
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="steam" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- SVG-заготовки -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f6dca4"/>
+        <stop offset=".5" stop-color="#e0b46a"/>
+        <stop offset="1" stop-color="#b9772f"/>
+      </linearGradient>
+      <path id="leaf" d="M0 0 C4 -5.5 12 -7 19 -2.5 C13 2.5 5 3.2 0 0Z"/>
+    </defs>
+  </svg>
+
+  <main>
+    <!-- ================= ГЛАВНЫЙ ЭКРАН ================= -->
+    <header class="hero">
+      <p class="eyebrow hero-in" style="--d:.1s">Приглашение на юбилей</p>
+
+      <div class="emblem hero-in" style="--d:.25s">
+        <svg class="branch" viewBox="0 0 60 160" aria-hidden="true">
+          <path class="stem" d="M46 156 C16 124, 8 64, 28 6"/>
+          <g class="leaves" fill="url(#goldGrad)">
+            <use href="#leaf" transform="translate(37.7 145.6) rotate(-150) scale(1.05)"/>
+            <use href="#leaf" transform="translate(37.7 145.6) rotate(-55) scale(.95)"/>
+            <use href="#leaf" transform="translate(27.7 127.2) rotate(-155) scale(1.1)"/>
+            <use href="#leaf" transform="translate(27.7 127.2) rotate(-50)"/>
+            <use href="#leaf" transform="translate(20.9 106.1) rotate(-160) scale(1.05)"/>
+            <use href="#leaf" transform="translate(20.9 106.1) rotate(-45) scale(.95)"/>
+            <use href="#leaf" transform="translate(17.5 82.8) rotate(-165)"/>
+            <use href="#leaf" transform="translate(17.5 82.8) rotate(-40) scale(.9)"/>
+            <use href="#leaf" transform="translate(17.4 57.9) rotate(-165) scale(.9)"/>
+            <use href="#leaf" transform="translate(17.4 57.9) rotate(-35) scale(.82)"/>
+            <use href="#leaf" transform="translate(20.9 32.1) rotate(-160) scale(.78)"/>
+            <use href="#leaf" transform="translate(20.9 32.1) rotate(-30) scale(.72)"/>
+            <use href="#leaf" transform="translate(28 6) rotate(-75) scale(.75)"/>
+          </g>
+        </svg>
+
+        <h1 class="age" aria-label="45 лет">45</h1>
+
+        <svg class="branch branch--right" viewBox="0 0 60 160" aria-hidden="true">
+          <path class="stem" d="M46 156 C16 124, 8 64, 28 6"/>
+          <g class="leaves" fill="url(#goldGrad)">
+            <use href="#leaf" transform="translate(37.7 145.6) rotate(-150) scale(1.05)"/>
+            <use href="#leaf" transform="translate(37.7 145.6) rotate(-55) scale(.95)"/>
+            <use href="#leaf" transform="translate(27.7 127.2) rotate(-155) scale(1.1)"/>
+            <use href="#leaf" transform="translate(27.7 127.2) rotate(-50)"/>
+            <use href="#leaf" transform="translate(20.9 106.1) rotate(-160) scale(1.05)"/>
+            <use href="#leaf" transform="translate(20.9 106.1) rotate(-45) scale(.95)"/>
+            <use href="#leaf" transform="translate(17.5 82.8) rotate(-165)"/>
+            <use href="#leaf" transform="translate(17.5 82.8) rotate(-40) scale(.9)"/>
+            <use href="#leaf" transform="translate(17.4 57.9) rotate(-165) scale(.9)"/>
+            <use href="#leaf" transform="translate(17.4 57.9) rotate(-35) scale(.82)"/>
+            <use href="#leaf" transform="translate(20.9 32.1) rotate(-160) scale(.78)"/>
+            <use href="#leaf" transform="translate(20.9 32.1) rotate(-30) scale(.72)"/>
+            <use href="#leaf" transform="translate(28 6) rotate(-75) scale(.75)"/>
+          </g>
+        </svg>
+      </div>
+
+      <p class="hero-name hero-in" style="--d:.45s">Алексей Сергеевич</p>
+      <p class="hero-tag hero-in" style="--d:.6s">юбилей с лёгким паром</p>
+
+      <div class="hero-date hero-in" style="--d:.75s">
+        <span class="line"></span>
+        <span>24 · 11 · 2026</span>
+        <span class="line"></span>
+      </div>
+
+      <a class="scroll-cue hero-in" style="--d:1s" href="#letter" aria-label="Листать вниз">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </header>
+
+    <!-- ================= ПИСЬМО ================= -->
+    <section class="card letter reveal" id="letter">
+      <svg class="ornament" viewBox="0 0 220 20" aria-hidden="true">
+        <path d="M0 10 H88 M132 10 H220" />
+        <circle cx="96" cy="10" r="2"/><circle cx="124" cy="10" r="2"/>
+        <path class="fill" d="M110 1 L119 10 L110 19 L101 10Z"/>
+      </svg>
+
+      <p class="lead">Дорогие друзья!</p>
+      <p>
+        Алексей Сергеевич отмечает <strong>45-летие</strong> и приглашает вас
+        разделить с ним этот вечер&nbsp;— в&nbsp;бане, где будет жаркий пар,
+        душевная компания и отличное настроение.
+      </p>
+
+      <ul class="chips" aria-label="Что нас ждёт">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20.5c-2.6-2.7 2.6-5 0-8.2s2.6-5.2 0-8.3M12 20.5c-2.6-2.7 2.6-5 0-8.2s2.6-5.2 0-8.3M17 20.5c-2.6-2.7 2.6-5 0-8.2s2.6-5.2 0-8.3"/></svg>
+          Жаркий пар
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3.5 19c.6-3.3 2.8-5 5.5-5s4.9 1.7 5.5 5M14.5 14.6c.8-.4 1.6-.6 2.5-.6 2.2 0 3.8 1.4 4.3 4"/></svg>
+          Друзья рядом
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>
+          Хорошее настроение
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= ДЕТАЛИ ================= -->
+    <section class="card details reveal" aria-label="Когда и где">
+      <div class="row">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        </div>
+        <div>
+          <p class="label">Когда</p>
+          <p class="value">24 ноября 2026</p>
+          <p class="sub">вторник</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+        </div>
+        <div>
+          <p class="label">Во сколько</p>
+          <p class="value">17:00</p>
+          <p class="sub">сбор гостей</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        </div>
+        <div>
+          <p class="label">Где</p>
+          <p class="value">Баня, ул.&nbsp;Катаева,&nbsp;116</p>
+          <div class="map-links">
+            <a href="https://2gis.kz/search/%D0%9A%D0%B0%D1%82%D0%B0%D0%B5%D0%B2%D0%B0%20116" target="_blank" rel="noopener">2ГИС</a>
+            <a href="https://yandex.kz/maps/?text=%D0%9A%D0%B0%D1%82%D0%B0%D0%B5%D0%B2%D0%B0%20116" target="_blank" rel="noopener">Яндекс Карты</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%B0%D1%82%D0%B0%D0%B5%D0%B2%D0%B0%20116" target="_blank" rel="noopener">Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ОБРАТНЫЙ ОТСЧЁТ ================= -->
+    <section class="card countdown reveal" aria-label="Обратный отсчёт">
+      <p class="eyebrow">До встречи осталось</p>
+      <div class="cd" id="countdown">
+        <div><span id="cd-d">00</span><small>дней</small></div>
+        <i>:</i>
+        <div><span id="cd-h">00</span><small>часов</small></div>
+        <i>:</i>
+        <div><span id="cd-m">00</span><small>минут</small></div>
+        <i>:</i>
+        <div><span id="cd-s">00</span><small>секунд</small></div>
+      </div>
+      <p class="cd-done" id="cd-done" hidden>Праздник уже начался — с лёгким паром!</p>
+
+      <details class="cal">
+        <summary>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>
+          Добавить в календарь
+        </summary>
+        <div class="cal-menu">
+          <a class="js-gcal" href="#" target="_blank" rel="noopener">Google Календарь</a>
+          <a class="js-ics" href="#">Apple / Outlook (.ics)</a>
+        </div>
+      </details>
+    </section>
+
+    <!-- ================= АНКЕТА ================= -->
+    <section class="card rsvp reveal" id="rsvp" aria-labelledby="rsvp-title">
+      <svg class="ornament" viewBox="0 0 220 20" aria-hidden="true">
+        <path d="M0 10 H88 M132 10 H220" />
+        <circle cx="96" cy="10" r="2"/><circle cx="124" cy="10" r="2"/>
+        <path class="fill" d="M110 1 L119 10 L110 19 L101 10Z"/>
+      </svg>
+      <h2 id="rsvp-title">Вы придёте?</h2>
+      <p class="muted center">Пожалуйста, ответьте заранее — так будет проще всё подготовить.</p>
+
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="firstName">Имя</label>
+          <input id="firstName" name="firstName" type="text" autocomplete="given-name" maxlength="40" placeholder="Например, Иван" required>
+          <p class="err" data-for="firstName"></p>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Фамилия</label>
+          <input id="lastName" name="lastName" type="text" autocomplete="family-name" maxlength="40" placeholder="Например, Петров" required>
+          <p class="err" data-for="lastName"></p>
+        </div>
+
+        <!-- ловушка для спам-ботов: человек это поле не видит -->
+        <div class="hp" aria-hidden="true">
+          <label>Сайт <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <fieldset class="choice">
+          <legend>Сможете присутствовать?</legend>
+          <label class="opt opt--yes">
+            <input type="radio" name="attending" value="yes" required>
+            <span class="opt-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.6"/></svg>
+              <b>Да, приду!</b>
+              <small>с удовольствием</small>
+            </span>
+          </label>
+          <label class="opt opt--no">
+            <input type="radio" name="attending" value="no">
+            <span class="opt-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+              <b>Не смогу</b>
+              <small>к сожалению</small>
+            </span>
+          </label>
+          <p class="err" data-for="attending"></p>
+        </fieldset>
+
+        <button class="btn btn--gold" type="submit" id="submit-btn">
+          <span class="btn-label">Отправить ответ</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+        <p class="err err--form" id="form-error" role="alert"></p>
+        <p class="setup-note" id="setup-note" hidden>
+          Приёмник ответов ещё не подключён (config.js). Ответы пока никуда не сохраняются.
+        </p>
+      </form>
+    </section>
+
+    <!-- ================= ОТВЕТ: ДА ================= -->
+    <section class="card result result--yes" id="result-yes" hidden tabindex="-1" aria-live="polite">
+      <div class="badge">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle class="badge-ring" cx="26" cy="26" r="23"/><path class="badge-check" d="M15 27l7.5 7.5L37.5 19"/></svg>
+      </div>
+      <h2>Ура, <span class="js-name"></span>!</h2>
+      <p class="muted center">Ваш ответ записан. Ждём вас — будет жарко!</p>
+
+      <dl class="recap">
+        <div><dt>Что</dt><dd>Юбилей Алексея Сергеевича — 45&nbsp;лет</dd></div>
+        <div><dt>Когда</dt><dd>Вторник, 24&nbsp;ноября 2026</dd></div>
+        <div><dt>Время</dt><dd>17:00</dd></div>
+        <div><dt>Где</dt><dd>Баня, ул.&nbsp;Катаева,&nbsp;116</dd></div>
+      </dl>
+
+      <div class="note">
+        <div class="note-ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10h15l-1.6 9.2a2 2 0 0 1-2 1.8H8.1a2 2 0 0 1-2-1.8z"/><path d="M3.5 10h17M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10"/></svg>
+        </div>
+        <div>
+          <p class="note-title">Примечание: всё своё — с собой!</p>
+          <p>Банные принадлежности <span class="muted">(полотенце, простынь, тапочки, шапка)</span> и&nbsp;алкоголь берём с собой.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn--ghost" href="https://2gis.kz/search/%D0%9A%D0%B0%D1%82%D0%B0%D0%B5%D0%B2%D0%B0%20116" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Маршрут
+        </a>
+        <a class="btn btn--ghost js-gcal" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          Календарь
+        </a>
+      </div>
+      <button class="link-btn js-change" type="button">Изменить ответ</button>
+    </section>
+
+    <!-- ================= ОТВЕТ: НЕТ ================= -->
+    <section class="card result result--no" id="result-no" hidden tabindex="-1" aria-live="polite">
+      <div class="badge badge--soft">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle class="badge-ring" cx="26" cy="26" r="23"/><path class="badge-check" d="M17 30c2.5-3 5.5-4.5 9-4.5s6.5 1.5 9 4.5M19 20h.01M33 20h.01"/></svg>
+      </div>
+      <h2>Очень жаль, <span class="js-name"></span>!</h2>
+      <p class="muted center">
+        Спасибо, что предупредили. Будем вас вспоминать за столом!<br>
+        Если планы изменятся — просто поменяйте ответ.
+      </p>
+      <button class="btn btn--ghost js-change" type="button">Изменить ответ</button>
+    </section>
+
+    <footer class="foot">
+      <svg class="ornament" viewBox="0 0 220 20" aria-hidden="true">
+        <path d="M0 10 H88 M132 10 H220" />
+        <circle cx="96" cy="10" r="2"/><circle cx="124" cy="10" r="2"/>
+        <path class="fill" d="M110 1 L119 10 L110 19 L101 10Z"/>
+      </svg>
+      <p>До встречи в парилке!</p>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
