@@ -80,43 +80,6 @@
     "&location=" + encodeURIComponent(EVENT.location);
   document.querySelectorAll(".js-gcal").forEach(function (a) { a.href = gcalUrl; });
 
-  function icsEscape(s) { return s.replace(/\\/g, "\\\\").replace(/,/g, "\\,").replace(/;/g, "\\;"); }
-  document.querySelectorAll(".js-ics").forEach(function (a) {
-    a.addEventListener("click", function (e) {
-      e.preventDefault();
-      var ics = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//yubiley45//invite//RU",
-        "CALSCALE:GREGORIAN",
-        "BEGIN:VEVENT",
-        "UID:yubiley45-20261124@invite",
-        "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+/, ""),
-        "DTSTART:" + fmtLocal(EVENT.start),
-        "DTEND:" + fmtLocal(endDate),
-        "SUMMARY:" + icsEscape(EVENT.title),
-        "LOCATION:" + icsEscape(EVENT.location),
-        "DESCRIPTION:" + icsEscape(EVENT.details),
-        "BEGIN:VALARM",
-        "TRIGGER:-PT3H",
-        "ACTION:DISPLAY",
-        "DESCRIPTION:" + icsEscape("Сегодня юбилей! 17:00, " + EVENT.location),
-        "END:VALARM",
-        "END:VEVENT",
-        "END:VCALENDAR"
-      ].join("\r\n");
-      var blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-      var url = URL.createObjectURL(blob);
-      var link = document.createElement("a");
-      link.href = url;
-      link.download = "yubiley-45.ics";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
-    });
-  });
-
   /* ---------------- анкета ---------------- */
   var form = document.getElementById("rsvp-form");
   var rsvpCard = document.getElementById("rsvp");
