@@ -44,6 +44,7 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
+  font-variant-numeric: lining-nums;
   overflow-x: hidden;
 }
 
@@ -170,7 +171,13 @@ main {
   font-family: var(--serif);
   font-weight: 700;
   font-size: clamp(8.5rem, 40vw, 14.5rem);
-  line-height: 0.86;
+  /* ровные (прописные) цифры вместо «старинных», которые уходят ниже строки */
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+  /* запас внутри блока, чтобы золотая заливка не обрезала края цифр */
+  line-height: 1;
+  padding: 0.02em 0.08em 0.1em;
+  margin: -0.04em 0 -0.12em;
   letter-spacing: -0.02em;
   background: linear-gradient(170deg, #fff1cf 0%, var(--gold-light) 18%, var(--gold) 48%, var(--gold-2) 72%, #8a5220 100%);
   -webkit-background-clip: text;
@@ -424,7 +431,8 @@ h2 {
   font-weight: 600;
   font-size: clamp(2.4rem, 11vw, 3.4rem);
   line-height: 1;
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
   color: var(--gold-light);
 }
 .cd small {
